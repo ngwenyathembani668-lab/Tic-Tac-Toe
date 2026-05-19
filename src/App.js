@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Board from './components/Board';
+import Scoreboard from './components/Scoreboard';
+import ResetButton from './components/ResetButton';
 
 function App() {
 
@@ -16,7 +18,8 @@ function App() {
 
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xPlaying, setXPlaying] = useState(true);
-  const [scores, setScores] = useState({xScore: 0, oScore: 0})
+  const [scores, setScores] = useState({xScore: 0, oScore: 0});
+  const [gameOver, setGameOver] = useState(false);
 
   const handleBoxClick = (boxIdx) => {
     const updatedBoard = board.map((value, idx) => {
@@ -51,14 +54,22 @@ function App() {
       const [x,y,z] = WIN_CONDITIONS[i];
 
       if (board[x] && board[x] === board[y] && board[y] === board[z]) {
+        setGameOver(true)
         return board[x]
       }
     }
   }
 
+  const resetBoard = () => {
+    setGameOver(false);
+    setBoard(Array(9).fill(null))
+  }
+
   return (
     <>
-      <Board board={board} onClick={handleBoxClick} />
+      <Scoreboard scores={scores} xPlaying={xPlaying} />
+      <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
+      <ResetButton resetBoard={resetBoard} /> 
     </>
   );
 }

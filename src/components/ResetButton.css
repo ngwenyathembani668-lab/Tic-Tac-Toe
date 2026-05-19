@@ -1,0 +1,15 @@
+.reset-btn {
+    background: rgb(44, 135, 255);
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 8px 12px;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: none;
+}
+
+.reset-btn-div {
+    display: flex;
+    justify-content: center;
+}

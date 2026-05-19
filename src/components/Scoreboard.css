@@ -1,0 +1,45 @@
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 280px;
+    font-size: 1.8rem;
+    border: 2px solid #8f8f8f;
+    /* border-top: 2px solid #8f8f8f; */
+    /* border-right: 2px solid #8f8f8f; */
+
+
+    /* background: #8f8f8f; */
+    /* background: #fff; */
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.score {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    /* height: 0.5rem; */
+    margin-bottom: 1px;
+}
+
+.x-score {
+    color: rgb(0, 255, 98);
+    border-bottom: 5px solid rgb(0, 255, 98);
+    /* border-radius: 0.5rem 0 0 0.5rem; */
+}
+
+.o-score {
+    color: rgb(44, 135, 255);
+    border-bottom: 5px solid rgb(44, 135, 255);
+    /* border-radius: 0 0.5rem 0.5rem 0; */
+}
+
+.inactive {
+    border-bottom: 5px solid transparent;
+}
