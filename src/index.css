@@ -12,3 +12,10 @@ body {
   background: #131314;
   /* color: #fff; */
 }
+
+.status {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 32px;
+  color: #fff;
+}

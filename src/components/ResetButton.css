@@ -1,5 +1,5 @@
-.reset-btn {
-    background: rgb(44, 135, 255);
+.reset-btn,
+.play-again-btn {
     font-size: 1.3rem;
     text-align: center;
     font-weight: 600;
@@ -7,6 +7,18 @@
     margin-top: 50px;
     border-radius: 25px;
     border: none;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background: rgb(44, 135, 255);
+    color: #fff;
+}
+
+.play-again-btn {
+    background: rgb(255, 111, 97);
+    color: #fff;
+    margin-left: 16px;
 }
 
 .reset-btn-div {
