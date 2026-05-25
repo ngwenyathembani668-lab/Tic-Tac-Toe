@@ -19,3 +19,20 @@ body {
   margin-top: 32px;
   color: #fff;
 }
+
+.mode-selection,
+.difficulty-selection {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  font-size: 1rem;
+}
+
+.mode-selection label,
+.difficulty-selection label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
