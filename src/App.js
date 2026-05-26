@@ -14,8 +14,7 @@ const WIN_CONDITIONS = [
   [2, 4, 6]
 ];
 
-// State management is centralized in this reducer-based game state.
-// The reducer owns the board, turn, scores, status, mode, and AI difficulty.
+
 const initialState = {
   board: Array(9).fill(null),
   xPlaying: true,
@@ -222,7 +221,6 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { board, xPlaying, scores, status, gameOver, mode, difficulty } = state;
 
-  // When the game is in computer mode and it is the AI's turn, make the move automatically.
   useEffect(() => {
     if (gameOver || mode !== 'computer' || xPlaying) {
       return;
